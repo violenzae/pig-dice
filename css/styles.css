@@ -1,0 +1,17 @@
+img {
+  width: 15%;
+}
+
+.player1Div { background-color: white; }
+.player1Div.green { background-color: #00cc00; }
+
+.player2Div { background-color: white; }
+.player2Div.green { background-color: #00cc00; }
+
+body {
+  text-align: center;
+}
+
+h2 {
+  color: red;
+}
