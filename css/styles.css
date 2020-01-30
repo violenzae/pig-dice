@@ -1,12 +1,13 @@
 img {
-  width: 15%;
+  width: 10%;
 }
 
-.player1Div { background-color: white; }
-.player1Div.green { background-color: #00cc00; }
+.pig1 { background-color: white; }
+.pig1.red { border-style: dotted; border-color: black; border-width: 2px}
 
-.player2Div { background-color: white; }
-.player2Div.green { background-color: #00cc00; }
+.pig2 { background-color: white; }
+.pig2.red { 
+  border-style: dotted; border-color: black; border-width: 2px;}
 
 body {
   text-align: center;

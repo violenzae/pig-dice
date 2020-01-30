@@ -71,22 +71,24 @@ $(document).ready(function() {
   $("#roll1").click(function(event) {
     event.preventDefault();
     if (player1.active === true) {
-      $(".player1Div").addClass("green");
+      $(".pig1").addClass("red");
       player1.rolling(); 
       if (player1.roll === 1){
         alert("You rolled a 1! Player 2 Turn START");
-        $(".player1Div").removeClass("green");
+        $(".pig1").removeClass("red");
+        $(".pig2").addClass("red");
         player1.switch();
       }
       player1.round(player1.roll);
       console.log("p1 roundscore" + player1.turn);
     
       } else if (player1.active === false) {
-        $(".player2Div").addClass("green");
+        $(".pig2").addClass("red");
         player2.rolling();
           if (player2.roll === 1){
             alert("You rolled a 1! Player 1 Turn START");
-            $(".player2Div").removeClass("green");
+            $(".pig2").removeClass("red");
+            $(".pig1").addClass("red");
             player1.switch();
           } 
           player2.round(player2.roll);
@@ -102,7 +104,7 @@ $(document).ready(function() {
       
       if (player1.active === true) {
         player1.totaler();
-        $(".player1Div").removeClass("green");
+        $(".pig1").removeClass("red");
         $("#total1").text(player1.total);
         player1.turn = 0;
         player1.winCheck();
@@ -111,7 +113,7 @@ $(document).ready(function() {
         console.log("player one is active" + player1.active);
       } else {
           player2.totaler();
-          $(".player2Div").removeClass("green");
+          $(".pig2").removeClass("red");
           $("#total2").text(player2.total);
           player2.turn = 0;
           player2.winCheck();
